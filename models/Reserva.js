@@ -4,6 +4,8 @@ const reservaSchema = new mongoose.Schema({
   nombre: String,
   email: String,
   fecha: String,
+  telefono: Number,     // 👈 Agregado
+  destino: String,      // 👈 Agregado
   personas: Number,
   mensaje: String,
   creadoEn: {
