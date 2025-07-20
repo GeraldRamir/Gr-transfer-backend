@@ -77,10 +77,9 @@ app.post('/api/subscribe', async (req, res) => {
 
 app.post('/api/notify', async (req, res) => {
   try {
-    const { title, body, rutaDestino } = req.body; // 👈 recibimos la ruta deseada
+    const { title, body } = req.body;
 
-    // Filtrar solo suscripciones que estén en esa ruta
-    const subscriptions = await Subscription.find({ ruta: rutaDestino });
+    const subscriptions = await Subscription.find();
 
     const payload = JSON.stringify({
       title: title || 'Nueva reserva',
