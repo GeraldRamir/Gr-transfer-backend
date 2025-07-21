@@ -83,7 +83,7 @@ app.post('/api/notify', async (req, res) => {
 
     const payload = JSON.stringify({
       title: title || 'Nueva reserva',
-      body: body || 'Se ha registrado una nueva reserva.',
+      body: body || 'nueva reseerva registrada',
     });
 
     const resultados = await Promise.allSettled(
